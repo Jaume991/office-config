@@ -1,0 +1,11 @@
+Tmux - Terminal multiplexer
+
+    Attach to session without syncyng windows:
+    
+    The reason both clients switch windows at the same time is because they are both connected to the same session (the “current window” is an attribute of the session, not the client). What you can do is link one or more windows into multiple different sessions. Since each session has its own “current window”, you can then switch windows independently in each session.
+
+    The easiest way to use this feature is to use the “grouped sessions” feature of the new-session command:
+
+    tmux new-session -t 'original session name or number'
+
+    Each session in a group will automatically share the same set of windows: opening/linking (or closing/unlinking) a window in one session of the group automatically causes the same window to be linked (or unlinked) in all the other sessions of the group.
