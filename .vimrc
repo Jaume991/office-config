@@ -4,8 +4,6 @@ colorscheme sourcerer
 " tab to spaces
 set tabstop=4 shiftwidth=4 expandtab
 set autoindent
-" gvim utf8
-set encoding=utf8
 " enable mouse
 set mouse=a
 " hightlight current line
@@ -24,11 +22,7 @@ set splitright
 " remove esc delay to return to visual mode quickly
 set timeoutlen=1000 ttimeoutlen=0
 " set font for mvim
-set guifont=Sauce_Code_Powerline:h9:cANSI
-" set guivim option
-set go=gc
-" Swapfiles directory
-set directory=$HOME/.vim/swapfiles//
+" set guifont=Meslo\ LG\ M\ for\ Powerline:h12
 
 " Maximize
 " Change to position of second monitor
@@ -40,7 +34,7 @@ set directory=$HOME/.vim/swapfiles//
 "autocmd GUIEnter * call libcallnr('maximize', 'Maximize', 1)
 
 " save temp files in a different path
-" set dir=~/.vimswap//,/var/tmp//,/tmp//
+set dir=~/.vimswap//,/var/tmp//,/tmp//
 
 " to start airline
 set laststatus=2
@@ -52,7 +46,7 @@ let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline_theme='bubblegum'
 
 "shortcuts
-map <Leader>1 :NERDTreeTabsToggle<CR>
+map <Leader>1 <plug>NERDTreeTabsToggle<CR>
 nmap <Leader>2 :TagbarToggle<CR>
 
 " run script to make blockmayus = esc
@@ -61,7 +55,7 @@ nmap <Leader>2 :TagbarToggle<CR>
 " exhuberant-ctags
 " map <Leader>t :!ctags --languages=PHP -R .<CR>
 " patched exhuberant-ctags with PHP namespaces
-set tags=./tags
+set tags=./.ctags
 map <Leader>t :!ctags -R --fields=+aS --languages=php .<CR>
 map <Leader>c :SyntasticCheck phpcs<CR>
 map <Leader>m :SyntasticCheck phpmd<CR>
@@ -87,7 +81,10 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
-  "let g:ctrlp_use_caching = 0
+  let g:ctrlp_use_caching = 0
+
+  " workaround for ctrlp not using .gitignore absolute path
+  let g:ctrlp_working_path_mode = 'ra'
 endif
 
 " multicursor shortcuts
@@ -149,39 +146,39 @@ endfunction
 autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 
+autocmd QuickFixCmdPost *log* cwindow
+
+"" Config Calendar
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+
 " Delete trailing spaces, e flag to be silent.
 command DelTrailing :%s/\s\+$//e
-" Supersearch
-command -nargs=* SS :noautocmd lvim <args>
+
+" Text object mapping
+" map cie ci"
+" map cae ca"
+" map die di"
+" map dae da"
+" map vie vi"
+" map vae va"
+
+" Something with html?
+" onoremap :<C-U>normal! /\v<\?(.*?[\r\n]*)\?>/<CR>
+
 " CSS
 " One line to multiline
 command -range CssToMultiline <line1>,<line2>s/\([{;]\|}\&\)\s*/\1\r /g
 " Multiline to one line
-command -range=% CssToLine <line1>,<line2>g/[;}]\s*$/-1j
-
-" AUTOCOMMANDS
-" Delete trailing spaces on save
-autocmd BufWritePre * :DelTrailing
-
-map cie ci"
-map cae ca"
-map vie vi"
-map vae va"
-
-onoremap g :<C-U>normal! /\v<\?(.*?[\r\n]*)\?>/<CR>
+command -range=% CssToLine <line1>,<line2>g/[;}]\s*$/-1j]
 
 " Easymotion
-map <Leader> <Plug>(easymotion-prefix)
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-" `s{char}{char}{label}`
-" fn -> n char
-nmap s <Plug>(easymotion-overwin-fn)
-
+" Disable default mappings
+let g:EasyMotion_do_mapping = 0
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 
-" JK motions: Line motions
+" Line motions
 map <Leader>g <Plug>(easymotion-lineforward)
 map <Leader>f <Plug>(easymotion-j)
 map <Leader>d <Plug>(easymotion-k)
@@ -189,7 +186,6 @@ map <Leader>s <Plug>(easymotion-linebackward)
 
 " Move to line
 nmap <Leader>e <Plug>(easymotion-overwin-line)
-
 " Move to word
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
@@ -197,13 +193,10 @@ map  <space>/ <Plug>(easymotion-sn)
 omap <space>/ <Plug>(easymotion-tn)
 " Easymotion - end
 
-
 " IncSearch
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 " IncSearch - end
-
-" let g:php_syntax_extensions_enabled = 1
 
 " unhighlight
 map <c-H> :nohlsearch<CR>
@@ -245,8 +238,8 @@ Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
 Plugin 'https://github.com/majutsushi/tagbar.git'
 
 " plugins for snippets
-" Plugin 'https://github.com/SirVer/ultisnips.git'
-" Plugin 'honza/vim-snippets'
+Plugin 'https://github.com/SirVer/ultisnips.git'
+Plugin 'honza/vim-snippets'
 
 " comment lines with gcc command
 Plugin 'https://github.com/tomtom/tcomment_vim.git'
@@ -300,36 +293,28 @@ Plugin 'jwalton512/vim-blade'
 " php complete
 Plugin 'shawncplus/phpcomplete.vim'
 
-" One-line to multiline css/less/sass/js/php....
-Plugin 'AndrewRadev/splitjoin.vim'
+" calendar
+Plugin 'itchyny/calendar.vim'
 
-" php indentation
-Plugin 'StanAngeloff/php.vim'
-
-" Cursor movement speed
+" easy motion
 Plugin 'easymotion/vim-easymotion'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'haya14busa/incsearch-fuzzy.vim'
-
-" Fullscreen gVim
-" set go-=m go-=T go-=r
-Plugin 'xolox/vim-shell'
-Plugin 'xolox/vim-misc'
 
 " less file syntax hightlight
 Plugin 'groenewege/vim-less'
 
 " Custom text objects
-Plugin 'kana/vim-textobj-user'
+"Plugin 'kana/vim-textobj-user'
 
 " Historic
-Plugin 'hjdivad/vimlocalhistory'
+"Plugin 'hjdivad/vimlocalhistory'
 
 " session
-Plugin 'xolox/vim-session'
+"Plugin 'xolox/vim-session'
 
 " Wakatime
-Plugin 'wakatime/vim-wakatime'
+"Plugin 'wakatime/vim-wakatime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
