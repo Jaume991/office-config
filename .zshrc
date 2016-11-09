@@ -1,12 +1,12 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# steeef
-# fino-time
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -42,7 +42,8 @@ ZSH_THEME="agnoster"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy":qqºfzxdfs[1;5[1;5ndfsdfsdfsdf
+# HIST_STAMPS="mm/dd/yyyy"
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -50,26 +51,25 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git composer)
+plugins=(composer git git-extras z)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+export EDITOR='vim'
+export DISABLE_AUTO_TITLE='true'
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
-
-export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -81,12 +81,40 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias confHosts="sudo vim /etc/hosts"
-alias confZSH="vim ~/.zshrc"
-alias confVim="vim ~/.vimrc"
-# hash -d projects="/projects/path"
+# Misc.
+alias df='df --human-readable'
+alias du='du --human-readable'
+alias grep='grep --color=auto'
+alias less='less --quiet'
 
+# Tmux 
+alias tmuxi="tmuxinator"
+
+# Copy/paste clipboard pipe
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+# Fetch hacker news
+alias hn="hn -k"
+
+# Dotfiles
+alias confhosts="sudo vim /etc/hosts"
+alias conftmux="vim ~/.tmux.conf"
+alias confvim="vim ~/.vimrc"
+alias confzsh="vim ~/.zshrc"
+
+# ls
+alias ldir="ls -d .*/ */"
+alias lfile="find . -maxdepth 1 -type f"
+alias lfile="ls -a -l | grep -v '^d'"
+alias ls="ls --color"
+
+# Git
 alias gnochange="git ls-files -v | grep '^[[:lower:]]'"
 alias gset-nochange="git update-index --assume-unchanged"
 alias gunset-nochange="git update-undex --no-assume-unchanged"
