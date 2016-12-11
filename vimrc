@@ -124,6 +124,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_php_checkers = ['php'] " removed phpcs and phpmd to execute manually
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_aggregate_errors = 1
 
 " PHPDOC config
@@ -208,6 +209,9 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
+" JSX lint
+let g:jsx_ext_required = 0
+
 " BUNDLE
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -247,6 +251,9 @@ Plugin 'https://github.com/majutsushi/tagbar.git'
 " plugins for snippets
 Plugin 'https://github.com/SirVer/ultisnips.git'
 Plugin 'honza/vim-snippets'
+
+" react snippets
+Bundle 'justinj/vim-react-snippets'
 
 " comment lines with gcc command
 Plugin 'https://github.com/tomtom/tcomment_vim.git'
@@ -314,6 +321,11 @@ Plugin 'groenewege/vim-less'
 " Custom text objects
 Plugin 'kana/vim-textobj-user'
 Plugin 'fvictorio/vim-textobj-backticks'
+
+" Vim jsx
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 " Historic
 "Plugin 'hjdivad/vimlocalhistory'
