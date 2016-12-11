@@ -40,13 +40,14 @@ set dir=~/.vimswap//,/var/tmp//,/tmp//
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+let g:airline#extensions#tabline#show_buffers = 0 " show open/closed buffers
+let g:airline#extensions#tabline#tab_nr_type = 0 " tab number
+let g:airline#extensions#tabline#fnamemod = ':t' " tab number
 " powerline theme
 let g:airline_theme='bubblegum'
 
 "shortcuts
-map <Leader>1 <plug>NERDTreeTabsToggle<CR>
+map <Leader>1 :NERDTreeToggle<CR>
 nmap <Leader>2 :TagbarToggle<CR>
 
 " run script to make blockmayus = esc
@@ -148,7 +149,7 @@ autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 
 autocmd QuickFixCmdPost *log* cwindow
 
-"" Config Calendar
+" Config Calendar
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 
@@ -201,6 +202,12 @@ map ?  <Plug>(incsearch-backward)
 " unhighlight
 map <c-H> :nohlsearch<CR>
 
+" Split navigation
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
 " BUNDLE
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -212,7 +219,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Search files
-Plugin 'https://github.com/kien/ctrlp.vim.git'
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim'
 
 " File tree (nerdtree)
 Plugin 'https://github.com/scrooloose/nerdtree.git'
@@ -305,7 +312,8 @@ Plugin 'haya14busa/incsearch-fuzzy.vim'
 Plugin 'groenewege/vim-less'
 
 " Custom text objects
-"Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-user'
+Plugin 'fvictorio/vim-textobj-backticks'
 
 " Historic
 "Plugin 'hjdivad/vimlocalhistory'
