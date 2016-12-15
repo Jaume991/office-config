@@ -306,7 +306,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
    ;; YouCompleteMe config
    ycmd-server-command '("python" "/home/jaume/ycmd/third_party/ycmd/ycmd")
    ycmd-extra-conf-whitelist '("~/Develop/*")
-   ycmd-force-semantic-completion t)
+   ycmd-force-semantic-completion t
+   ;; Turn off auto-save
+   auto-save nil)
 )
 
 (defun dotspacemacs/user-config ()
