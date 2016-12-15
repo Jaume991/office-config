@@ -36,8 +36,9 @@ values."
      syntax-checking
      ycmd
      ;; Language specific
-     javascript
      php
+     html
+     javascript
      markdown
      ;; Themes
      themes-megapack
