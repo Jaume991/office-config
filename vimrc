@@ -44,7 +44,7 @@ let g:airline#extensions#tabline#show_buffers = 0 " show open/closed buffers
 let g:airline#extensions#tabline#tab_nr_type = 0 " tab number
 let g:airline#extensions#tabline#fnamemod = ':t' " tab number
 " powerline theme
-let g:airline_theme='bubblegum'
+let g:airline_theme='base16'
 
 "shortcuts
 map <Leader>1 :NERDTreeToggle<CR>
