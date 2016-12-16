@@ -1,3 +1,8 @@
+Zsh
+    Use .zprofile to load required PATHS
+    DOTPATH -> where all dot configuration files are (/home/<username>)
+    HOSTSPATH -> hosts file location ( /etc/hosts )
+
 Tmux - Terminal multiplexer
 
     Attach to session without syncyng windows:
