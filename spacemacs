@@ -39,6 +39,8 @@ values."
      php
      html
      javascript
+     emacs-lisp
+     vimscript
      markdown
      ;; Themes
      themes-megapack
@@ -48,8 +50,7 @@ values."
      ;; Common
      helm
      better-defaults
-     emacs-lisp
-     ;; org
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -305,9 +306,11 @@ before packages are loaded. If you are unsure, you should try in setting them in
    ;; When using projectile change neotree root
    projectile-switch-project-action 'neotree-projectile-action
    ;; YouCompleteMe config
-   ycmd-server-command '("python" "/home/jaume/ycmd/third_party/ycmd/ycmd")
+   ycmd-server-command '("python" "/home/jaume/ycmd/ycmd")
    ycmd-extra-conf-whitelist '("~/Develop/*")
    ycmd-force-semantic-completion t
+   ycmd/all-the-modes t
+   global-company-mode t
    ;; Turn off auto-save
    auto-save nil)
 )
@@ -320,8 +323,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; Enable clock in bottom bar
-  (display-time-mode 1)
-  )
+  (setq
+   display-time-mode t
+   display-time-24hr-format t)
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
