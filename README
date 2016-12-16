@@ -30,3 +30,10 @@ To use `vmd` (Github-favored live preview)
 ``` sh
 npm install -g vmd
 ```
+
+# Gitignore
+
+To set a global gitgnore
+``` sh
+git config --global core.excludesfile ~/.gitignore
+```
