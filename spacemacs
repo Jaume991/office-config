@@ -325,6 +325,10 @@ you should place your code here."
   ;; Enable clock in bottom bar
   (display-time-mode)
  (setq
+  ;; Turn off auto-save
+  auto-save nil
+  ;; Shorcut viewer (which-key) size
+  which-key-max-description-length 100
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
