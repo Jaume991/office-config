@@ -23,6 +23,14 @@ Each session in a group will automatically share the same set of windows: openin
 
 # Spacemacs - The best editor is neither Emacs nor Vim, it's Emacs and Vim!
 
+## Windows
+
+### Winner mode
+
+Winner-mode allows to 'undo' and 'redo' changes in windows configuration.
+
+Source: https://www.emacswiki.org/emacs/WinnerMode
+
 ## Markdown
 
 To use `vmd` (Github-favored live preview)
