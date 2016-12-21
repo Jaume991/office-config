@@ -349,6 +349,13 @@ you should place your code here."
     (split-window-right-and-focus)
     (spacemacs/find-dotfile))
   (spacemacs/set-leader-keys "fec" 'custom/edit-dotfile-split-vertical-focus)
+  ;; Avy goto first nonblack character line - jl
+  (defun custom/avy-goto-line-first-nonblank ()
+    "Avy goto first nonblack character line"
+    (interactive)
+    (avy-goto-line)
+    (evil-first-non-blank))
+  (spacemacs/set-leader-keys "jl" 'custom/avy-goto-line-first-nonblank)
   ;; SHORTCUTS - end
 
 ;; Do not write anything past this comment. This is where Emacs will
