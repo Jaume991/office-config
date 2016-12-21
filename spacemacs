@@ -318,14 +318,13 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq
-   ;; Enable clock in bottom bar
-   display-time-mode t
+   ;; Clock 24h mode
    display-time-24hr-format t
    ;; Disable system load in bottom bar when using clock
-   display-time-default-load-average nil
-   ;; Turn off auto-save
-   auto-save nil)
-)
+   display-time-default-load-average nil)
+  ;; Enable clock in bottom bar
+  (display-time-mode)
+ (setq
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
