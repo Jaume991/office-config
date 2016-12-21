@@ -342,6 +342,13 @@ you should place your code here."
   ;; SHORTCUTS - start
   ;; Kill windows and buffer
   (spacemacs/set-leader-keys "wb" 'kill-buffer-and-window)
+  ;; Edit spacemacs dotfile in vertical split and focus - fec
+  (defun custom/edit-dotfile-split-vertical-focus ()
+    "Edit spacemacs dotfile in vertical split and focus"
+    (interactive)
+    (split-window-right-and-focus)
+    (spacemacs/find-dotfile))
+  (spacemacs/set-leader-keys "fec" 'custom/edit-dotfile-split-vertical-focus)
   ;; SHORTCUTS - end
 
 ;; Do not write anything past this comment. This is where Emacs will
