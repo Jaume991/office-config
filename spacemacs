@@ -329,6 +329,16 @@ you should place your code here."
   auto-save nil
   ;; Shorcut viewer (which-key) size
   which-key-max-description-length 100
+  ;; PHP - start
+  ;; phpmd executable and laravel ruleset
+  flycheck-php-phpmd-executable "/home/jaume/.composer/vendor/bin/phpmd"
+  ;;phpcs executable and laravel ruleset
+  flycheck-php-phpcs-executable "/home/jaume/.composer/vendor/bin/phpcs"
+  flycheck-phpcs-standard "/home/jaume/.composer/vendor/pragmarx/laravelcs/Standards/Laravel/ruleset.xml"
+  )
+  ;; Blade files to web-mode
+  (add-to-list 'auto-mode-alist '("\\.blade.php\\'" . web-mode))
+  ;; PHP - end
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
