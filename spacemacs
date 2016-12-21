@@ -339,6 +339,10 @@ you should place your code here."
   ;; Blade files to web-mode
   (add-to-list 'auto-mode-alist '("\\.blade.php\\'" . web-mode))
   ;; PHP - end
+  ;; SHORTCUTS - start
+  ;; Kill windows and buffer
+  (spacemacs/set-leader-keys "wb" 'kill-buffer-and-window)
+  ;; SHORTCUTS - end
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
