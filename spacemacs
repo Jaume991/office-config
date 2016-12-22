@@ -408,7 +408,6 @@ yo should place your code here."
   (spacemacs/set-leader-keys "\\L" 'custom/persp-load-quicksave-by-names)
   ;; Persp state Quicksave - end
   ;; SHORTCUTS - end
-
   )
 ;;; .spacemacs ends here
 ;; Do not write anything past this comment. This is where Emacs will
