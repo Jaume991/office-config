@@ -23,6 +23,72 @@ Each session in a group will automatically share the same set of windows: openin
 
 # Spacemacs - The best editor is neither Emacs nor Vim, it's Emacs and Vim!
 
+## Configuration
+
+- Start with fullscreen
+- Layers
+ - Auto-completion
+ - Syntax-cheking
+ - Ycmd
+ - Php
+ - html
+ - Javascript
+ - Emacs-lisp
+ - Vimscript
+ - Python
+ - Markdown
+  - `Markdown-live-preview-engine 'vmd`
+ - Themes-megapack
+ - Git
+ - Helm
+ - Better-defaults
+- Editing style vim
+- Random startup banner
+- Font
+ - Source code pro for powerline
+- Cycling themes
+ - Spacemacs-dark
+ - Gotham
+
+### User configuration
+
+- `display-time-24hr-format t`
+- `display-time-default-load-average nil`
+- `auto-save nil`
+- `which-key-max-description-length 100`
+
+## Shorcuts
+
+### Quicksave perspective
+
+- Quicksave and exit - `SPC q f`
+- Quicksave with name and exit - `SPC q f`
+- Load quicksave - `SPC \ l`
+- Load quicksave with name - `SPC \ L`
+
+### Avy
+
+Changed go to line for a custom function go to line to first non-blank character
+
+### Edit spacemacs configuration
+
+Use `SPC f e c` to edit spacemacs configuration in vertical split and focus
+
+### Kill buffer and window - `SPC w b`
+
+### Transient states
+
+#### Toggle manipulation
+
+- Shortcut `SPC t .`
+
+- Toggles
+ - `n` Line numbers
+ - `r` Relative line number
+ - `g` Golden ratio
+ - `w` Show whitespace
+ - `h` Evil clear highlight
+
 ## Windows
 
 ### Winner mode
