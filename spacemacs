@@ -409,6 +409,19 @@ yo should place your code here."
   ;; Persp state Quicksave - end
   ;; SHORTCUTS - end
   )
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values (quote ((Byte-compile-warnings not free-vars unresolved)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 ;;; .spacemacs ends here
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
