@@ -352,6 +352,24 @@ yo should place your code here."
     (split-window-right-and-focus)
     (spacemacs/find-dotfile))
   (spacemacs/set-leader-keys "fec" 'custom/edit-dotfile-split-vertical-focus)
+  ;; Trying to do toggle transient
+  (spacemacs|define-transient-state toggle-manipulation
+    :title "Toggle manipulation transient state"
+    :doc (concat "
+ [_n_]^^^^       line numbers                    [_q_] exit
+ [_r_]^^^^       relative line numbers
+ [_h_]^^^^       No highlight
+ [_g_]^^^^       Golden ratio
+ [_w_]^^^^       Show whitespace
+")
+    :bindings
+    ("q" nil :exit t)
+    ("n" spacemacs/toggle-line-numbers)
+    ("r" spacemacs/linum-relative-toggle)
+    ("g" spacemacs/toggle-golden-ratio)
+    ("w" spacemacs/toggle-whitespace)
+    ("h" spacemacs/evil-search-clear-highlight))
+  (spacemacs/set-leader-keys "t." 'spacemacs/toggle-manipulation-transient-state/body)
   ;; Avy goto first nonblack character line - jl
   (defun custom/avy-goto-line-first-nonblank ()
     "Avy goto first nonblack character line"
