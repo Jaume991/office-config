@@ -31,7 +31,14 @@ Winner-mode allows to 'undo' and 'redo' changes in windows configuration.
 
 Source: https://www.emacswiki.org/emacs/WinnerMode
 
-## Markdown
+## Languages
+
+### PHP
+
+Added .blade.php format to web-mode
+Custom phpcs statandard for laravel (removed tabs for whitespaces rule)
+
+### Markdown
 
 To use `vmd` (Github-favored live preview)
 
