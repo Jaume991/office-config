@@ -1,3 +1,32 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+**Table of Contents**
+
+- [Zsh](#zsh)
+- [Tmux - Terminal multiplexer](#tmux---terminal-multiplexer)
+- [Spacemacs - The best editor is neither Emacs nor Vim, it's Emacs and Vim!](#spacemacs---the-best-editor-is-neither-emacs-nor-vim-its-emacs-and-vim)
+    - [Configuration](#configuration)
+        - [User configuration](#user-configuration)
+    - [Shorcuts](#shorcuts)
+        - [Quicksave perspective](#quicksave-perspective)
+        - [Avy](#avy)
+        - [Edit spacemacs configuration](#edit-spacemacs-configuration)
+        - [Kill buffer and window - `SPC w b`](#kill-buffer-and-window---spc-w-b)
+        - [Transient states](#transient-states)
+            - [Toggle manipulation](#toggle-manipulation)
+    - [Windows](#windows)
+        - [Winner mode](#winner-mode)
+    - [Languages](#languages)
+        - [PHP](#php)
+        - [Markdown](#markdown)
+    - [Useful documentation](#useful-documentation)
+        - [Change meta+number shortcut. Currently used by window-numbering](#change-metanumber-shortcut-currently-used-by-window-numbering)
+        - [Define global key only when mode is active](#define-global-key-only-when-mode-is-active)
+        - [Define evil key](#define-evil-key)
+- [Gitignore](#gitignore)
+
+<!-- markdown-toc end -->
+
+
 # Zsh
 
 Use .zprofile to load required PATHS
