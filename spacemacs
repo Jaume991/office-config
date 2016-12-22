@@ -356,6 +356,8 @@ you should place your code here."
     (avy-goto-line)
     (evil-first-non-blank))
   (spacemacs/set-leader-keys "jl" 'custom/avy-goto-line-first-nonblank)
+  ;; Prefix for spacemacs - \
+  (spacemacs/declare-prefix "\\" "Spacemacs")
   ;; SHORTCUTS - end
 
 ;; Do not write anything past this comment. This is where Emacs will
