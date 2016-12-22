@@ -1,7 +1,10 @@
+;;; .Spacemacs --- Spacemacs config file
+;;; Commentary:
 ;; -*- mode: emacs-lisp -*-
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+;;; Code:
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
 You should not put any user code in this function besides modifying the variable
@@ -299,7 +302,7 @@ values."
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
  This function is mostly useful for variables that need to be set
-before packages are loaded. If you are unsure, you should try in setting them in
+before packages are loaded.  If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq
    ;; YouCompleteMe config
@@ -314,9 +317,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration.
-This is the place where most of your configurations should be done. Unless it is
+This is the place where most of your configurations should be done.  Unless it is
 explicitly specified that a variable should be set before a package is loaded,
-you should place your code here."
+yo should place your code here."
   (setq
    ;; Clock 24h mode
    display-time-24hr-format t
@@ -389,5 +392,6 @@ you should place your code here."
   ;; SHORTCUTS - end
 
   )
+;;; .spacemacs ends here
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
