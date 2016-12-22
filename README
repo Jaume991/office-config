@@ -112,6 +112,26 @@ To use `vmd` (Github-favored live preview)
 npm install -g vmd
 ```
 
+## Useful documentation
+
+### Change meta+number shortcut. Currently used by window-numbering
+
+``` emacs-lisp
+  (let ((m window-numbering-keymap)) (define-key m "\M-n" 'select-window-n))
+```
+
+### Define global key only when mode is active
+
+``` emacs-lisp
+  (eval-after-load '{active-mode} (define-key evil-{evil-mode}-state-map (kbd "{shortcut}") '{function}))
+```
+
+### Define evil key
+
+``` emacs-lisp
+  (define-key evil-{evil-mode}-state-map (kbd "{shortcut}") '{function})
+```
+
 # Gitignore
 
 To set a global gitgnore
