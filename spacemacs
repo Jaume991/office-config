@@ -358,6 +358,21 @@ you should place your code here."
   (spacemacs/set-leader-keys "jl" 'custom/avy-goto-line-first-nonblank)
   ;; Prefix for spacemacs - \
   (spacemacs/declare-prefix "\\" "Spacemacs")
+  ;; Persp state Quicksave - start
+  ;; Quicksave state to file and exit - qf
+  (defun custom/persp-quicksave-and-exit ()
+    "Save state to file then exit"
+    (interactive)
+    (persp-save-state-to-file "persp-quicksave")
+    (spacemacs/prompt-kill-emacs))
+  (spacemacs/set-leader-keys "qf" 'custom/persp-quicksave-and-exit)
+  ;; Quicksave state to file with names and exit - qf
+  (defun custom/persp-quicksave-by-names-and-exit ()
+    "Save state to file then exit"
+    (interactive)
+    (persp-save-to-file-by-names "persp-quicksave")
+    (spacemacs/prompt-kill-emacs))
+  (spacemacs/set-leader-keys "qF" 'custom/persp-quicksave-by-names-and-exit)
   ;; SHORTCUTS - end
 
 ;; Do not write anything past this comment. This is where Emacs will
