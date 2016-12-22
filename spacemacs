@@ -373,6 +373,19 @@ you should place your code here."
     (persp-save-to-file-by-names "persp-quicksave")
     (spacemacs/prompt-kill-emacs))
   (spacemacs/set-leader-keys "qF" 'custom/persp-quicksave-by-names-and-exit)
+  ;; Load quicksave persp
+  (defun custom/persp-load-quicksave ()
+    "Load quicksave persp state"
+    (interactive)
+    (persp-load-state-from-file "persp-quicksave"))
+  (spacemacs/set-leader-keys "\\l" 'custom/persp-load-quicksave)
+  ;; Load quicksave persp names
+  (defun custom/persp-load-quicksave-by-names ()
+    "Load quicksave persp state names"
+    (interactive)
+    (persp-load-from-file-by-names "persp-quicksave"))
+  (spacemacs/set-leader-keys "\\L" 'custom/persp-load-quicksave-by-names)
+  ;; Persp state Quicksave - end
   ;; SHORTCUTS - end
 
 ;; Do not write anything past this comment. This is where Emacs will
