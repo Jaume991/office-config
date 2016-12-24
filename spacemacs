@@ -306,7 +306,7 @@ before packages are loaded.  If you are unsure, you should try in setting them i
 `dotspacemacs/user-config' first."
   (setq
    ;; YouCompleteMe config
-   ycmd-server-command '("python" "/home/jaume/ycmd/ycmd")
+   ycmd-server-command (list "python" (getenv "YCMDPATH"))
    ycmd-extra-conf-whitelist '("~/Develop/*")
    ycmd-force-semantic-completion t
    ycmd/all-the-modes t
@@ -334,10 +334,10 @@ yo should place your code here."
   which-key-max-description-length 100
   ;; PHP - start
   ;; phpmd executable and laravel ruleset
-  flycheck-php-phpmd-executable "/home/jaume/.composer/vendor/bin/phpmd"
+  flycheck-php-phpmd-executable '(getenv "PHPMD")
   ;;phpcs executable and laravel ruleset
-  flycheck-php-phpcs-executable "/home/jaume/.composer/vendor/bin/phpcs"
-  flycheck-phpcs-standard "/home/jaume/.composer/vendor/pragmarx/laravelcs/Standards/Laravel/ruleset.xml"
+  flycheck-php-phpcs-executable '(getenv "PHPCS")
+  flycheck-phpcs-standard '(getenv "PHPCS_RULESET")
   )
   ;; Blade files to web-mode
   (add-to-list 'auto-mode-alist '("\\.blade.php\\'" . web-mode))
