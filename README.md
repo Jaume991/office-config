@@ -29,11 +29,25 @@
 
 # Zsh
 
-Use .zprofile to load required PATHS
+Use .profile, .zprofile to load required PATHS
 
+- Common
+ - `DOTPATH` -> where all dot configuration files are (`/home/<username>`)
+ - `HOSTSPATH` -> hosts file location ( `/etc/hosts` )
+ - `PATH` -> Add composer bin (`/.composer/vendor/bin`)
+- Android
+ - `ANDROID_HOME` -> Sdk (`/home/<username>/Android/Sdk`)
+ - `PATH` -> add bin, tool and platform tools
+  - `/usr/local/android-studio/bin`
+  - `${ANDROID_HOME}/tools`
+  - `${ANDROID_HOME}/platform-tools`
+- Spacemacs
+ - `YCMDPATH` -> YCMD executable (`/home/<username>/ycmd/ycmd`)
+ - Flycheck php laravel oriented
+  - `PHPMD` -> Mess detector executable (`/home/<username>/.composer/vendor/bin/phpmd`)
+  - `PHPCS` -> Sintax checker executable (`/home/<username>/.composer/vendor/bin/phpcs`)
+  - `PHPCS_RULESET` -> Sintax checker ruleset (`/home/<username>/.composer/vendor/pragmarxlaravelcs/Standards/Laravel/ruleset.xml`)
 
-- `DOTPATH` -> where all dot configuration files are (`/home/<username>`)
-- `HOSTSPATH` -> hosts file location ( `/etc/hosts` )
 
 # Tmux - Terminal multiplexer
 
