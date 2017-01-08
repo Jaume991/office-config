@@ -175,6 +175,12 @@ npm install -g vmd
   (define-key evil-{evil-mode}-state-map (kbd "{shortcut}") '{function})
 ```
 
+### Functions
+
+#### Search with ag
+
+ - `-G{regexp}` It's posible to use regexp to search file route from start of projectile. Can be used anywhere.
+
 # Gitignore
 
 To set a global gitgnore
