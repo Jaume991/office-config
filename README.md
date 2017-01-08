@@ -181,6 +181,29 @@ npm install -g vmd
 
  - `-G{regexp}` It's posible to use regexp to search file route from start of projectile. Can be used anywhere.
 
+## Todo
+
+ - (CONF) YouCompletesMe
+ - (DOC) Substitute with emacs. Inner file, project of folder
+ - (DOC) Change '...' -> "..." (SURROUND)
+ - (DOC) Comment line
+ - (DOC)(PROJECTILE) global ignore
+ - (EVILMODE) Create custom text objects
+  - Variables / constants
+  - Functions
+  - Conditions / loops
+ - (EVILMODE) Movement using fuzzysearch like easymotion vim package
+ - (EVILMODE) Emet and snippets
+ - (EVILMODE) Multicusor
+ - (EVILMODE) Delete lines without spaces
+ - (FLYCHECK) Implement easy syntax rules asking for confirmation
+ - (FLYCHECK) Custom syntax checks
+ - (LANG)(REACTNATIVE) snippets
+ - (LANG)(REACTNATIVE) Html/jsx tag creation edition
+ - (SEARCH) Modify searched files
+ - (SEARCH) Fuzzy single line
+ - (HIGHLIGHT) Notify double blank line
+
 # Gitignore
 
 To set a global gitgnore
