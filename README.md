@@ -11,6 +11,7 @@
         - [Avy](#avy)
         - [Edit spacemacs configuration](#edit-spacemacs-configuration)
         - [Kill buffer and window - `SPC w b`](#kill-buffer-and-window---spc-w-b)
+        - [Open projetile on new frame - `SPC p P`](#open-projetile-on-new-frame---spc-p-p)
         - [Transient states](#transient-states)
             - [Toggle manipulation](#toggle-manipulation)
     - [Windows](#windows)
@@ -22,6 +23,9 @@
         - [Change meta+number shortcut. Currently used by window-numbering](#change-metanumber-shortcut-currently-used-by-window-numbering)
         - [Define global key only when mode is active](#define-global-key-only-when-mode-is-active)
         - [Define evil key](#define-evil-key)
+        - [Functions](#functions)
+            - [Search with ag](#search-with-ag)
+    - [Todo](#todo)
 - [Gitignore](#gitignore)
 
 <!-- markdown-toc end -->
