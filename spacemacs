@@ -407,6 +407,20 @@ yo should place your code here."
     (persp-load-from-file-by-names "persp-quicksave"))
   (spacemacs/set-leader-keys "\\L" 'custom/persp-load-quicksave-by-names)
   ;; Persp state Quicksave - end
+  ;; Projectile - Start
+  (defun custom/projectile-switch-project-other-frame ()
+    "otherSwitch to a project to a new frame."
+    (interactive)
+    (let (projects)
+      (if (setq projects (projectile-relevant-known-projects))
+          (projectile-completing-read
+           "Switch to project: " projects
+           :action (lambda (project)
+                     project
+                     (dired-other-frame project)))
+        (error "There are no known projects"))))
+  (spacemacs/set-leader-keys "pP" 'custom/projectile-switch-project-other-frame)
+  ;; Projectile - end
   ;; SHORTCUTS - end
   )
 

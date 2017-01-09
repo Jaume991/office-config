@@ -119,6 +119,8 @@ Use `SPC f e c` to edit spacemacs configuration in vertical split and focus
 
 ### Kill buffer and window - `SPC w b`
 
+### Open projetile on new frame - `SPC p P`
+
 ### Transient states
 
 #### Toggle manipulation
