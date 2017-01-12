@@ -35,6 +35,8 @@
 
 Use .profile, .zprofile to load required PATHS
 
+Android enviroment variables, some useful paths to use with different os and differents path to configure the others without changes so can be used as a symbolic link.
+
 - Common
   - `DOTPATH` -> where all dot configuration files are (`/home/<username>`)
   - `HOSTSPATH` -> hosts file location ( `/etc/hosts` )
