@@ -320,6 +320,7 @@ layers configuration.
 This is the place where most of your configurations should be done.  Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 yo should place your code here."
+  (add-to-list 'default-frame-alist '(fullscreen . fullscreen))
   (setq
    ;; Clock 24h mode
    display-time-24hr-format t
