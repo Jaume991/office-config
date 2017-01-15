@@ -92,7 +92,7 @@ alias du='du --human-readable'
 alias grep='grep --color=auto'
 alias less='less --quiet'
 
-# Tmux 
+# Tmux
 alias tmuxi="tmuxinator"
 
 # Copy/paste clipboard pipe
@@ -113,6 +113,7 @@ alias ldir="ls -d .*/ */"
 alias lfile="find . -maxdepth 1 -type f"
 alias lfile="ls -a -l | grep -v '^d'"
 alias ls="ls --color"
+alias fdir="find ~ -name"
 
 # Git
 alias gnochange="git ls-files -v | grep '^[[:lower:]]'"
