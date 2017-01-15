@@ -2,6 +2,7 @@
 **Table of Contents**
 
 - [Zsh](#zsh)
+    - [FZF - Fuzzy finder directories, files and history](#fzf---fuzzy-finder-directories-files-and-history)
 - [Tmux - Terminal multiplexer](#tmux---terminal-multiplexer)
 - [Spacemacs - The best editor is neither Emacs nor Vim, it's Emacs and Vim!](#spacemacs---the-best-editor-is-neither-emacs-nor-vim-its-emacs-and-vim)
     - [Configuration](#configuration)
@@ -53,6 +54,15 @@ Android enviroment variables, some useful paths to use with different os and dif
     - `PHPMD` -> Mess detector executable (`/home/<username>/.composer/vendor/bin/phpmd`)
     - `PHPCS` -> Sintax checker executable (`/home/<username>/.composer/vendor/bin/phpcs`)
     - `PHPCS_RULESET` -> Sintax checker ruleset (`/home/<username>/.composer/vendor/pragmarxlaravelcs/Standards/Laravel/ruleset.xml`)
+
+## FZF - Fuzzy finder directories, files and history
+
+[Github - fzf](https://github.com/junegunn/fzf)
+
+ - `CTRL-T` - Paste the selected files and directories onto the command line
+ - `CTRL-R` - Paste the selected command from history onto the command line
+ - `ALT-C` - cd into the selected directory
+
 
 
 # Tmux - Terminal multiplexer
