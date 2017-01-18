@@ -311,7 +311,7 @@ before packages are loaded.  If you are unsure, you should try in setting them i
    ycmd-extra-conf-whitelist '("~/Develop/*")
    ycmd-force-semantic-completion t
    ycmd/all-the-modes t
-   global-company-mode t)
+  )
 )
 
 (defun dotspacemacs/user-config ()
@@ -323,6 +323,8 @@ explicitly specified that a variable should be set before a package is loaded,
 yo should place your code here."
   (add-to-list 'default-frame-alist '(fullscreen . fullscreen))
   (setq
+   global-company-mode t
+   scroll-margin 5
    ;; Clock 24h mode
    display-time-24hr-format t
    ;; Disable system load in bottom bar when using clock
