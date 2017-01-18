@@ -350,7 +350,11 @@ yo should place your code here."
   ;; Kill windows and buffer
   (spacemacs/set-leader-keys "wb" 'kill-buffer-and-window)
   ;; Switch binding to reload buffer from disk
-  (spacemacs/set-leader-keys "br" 'spacemacs/safe-revert-buffer)
+  (defun custom/revert-buffer-noconfirm ()
+    "Revert-buffer noconfirm and preserve modes"
+    (interactive)
+    (revert-buffer 0 t t))
+  (spacemacs/set-leader-keys "br" 'custom/revert-buffer-noconfirm)
   (spacemacs/set-leader-keys "bR" 'persp-remove-buffer)
   ;; Edit spacemacs dotfile in vertical split and focus - fec
   (defun custom/edit-dotfile-split-vertical-focus ()
