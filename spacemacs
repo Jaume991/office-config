@@ -49,8 +49,7 @@ values."
      ;; Themes
      themes-megapack
      ;; Git
-     (git :variables
-          git-magic-status-fullscreen t)
+     git
      ;; Common
      helm
      better-defaults
