@@ -339,10 +339,10 @@ yo should place your code here."
     which-key-max-description-length 100
     ;; PHP - start
     ;; phpmd executable and laravel ruleset
-    flycheck-php-phpmd-executable '(getenv "PHPMD")
+    flycheck-php-phpmd-executable (getenv "PHPMD")
     ;;phpcs executable and laravel ruleset
-    flycheck-php-phpcs-executable '(getenv "PHPCS")
-    flycheck-phpcs-standard '(getenv "PHPCS_RULESET")
+    flycheck-php-phpcs-executable (getenv "PHPCS")
+    flycheck-phpcs-standard (getenv "PHPCS_RULESET")
   )
   ;; Blade files to web-mode
   (add-to-list 'auto-mode-alist '("\\.blade.php\\'" . web-mode))
