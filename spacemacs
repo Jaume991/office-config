@@ -322,6 +322,7 @@ explicitly specified that a variable should be set before a package is loaded,
 yo should place your code here."
   (add-to-list 'default-frame-alist '(fullscreen . fullscreen))
   (setq
+    neo-window-fixed-size nil
     ;; Enable company-mode globaly
     global-company-mode t
     ;; Smooth-scroll start at 5 lines before window borders
