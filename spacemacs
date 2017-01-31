@@ -310,8 +310,8 @@ before packages are loaded.  If you are unsure, you should try in setting them i
    ycmd-extra-conf-whitelist '("~/Develop/*")
    ycmd-force-semantic-completion t
    ycmd/all-the-modes t
+   )
   )
-)
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -322,31 +322,32 @@ explicitly specified that a variable should be set before a package is loaded,
 yo should place your code here."
   (add-to-list 'default-frame-alist '(fullscreen . fullscreen))
   (setq
-    ;; Indent code blocks in org-mode
-    org-src-tab-acts-natively t
-    neo-window-fixed-size nil
-    ;; Enable company-mode globaly
-    global-company-mode t
-    ;; Smooth-scroll start at 5 lines before window borders
-    scroll-margin 5
-    ;; Clock 24h mode
-    display-time-24hr-format t
-    ;; Disable system load in bottom bar when using clock
-    display-time-default-load-average nil)
+   ;; Indent code blocks in org-mode
+   org-src-tab-acts-natively t
+   ;; Neotree no fixed size
+   neo-window-fixed-size nil
+   ;; Enable company-mode globaly
+   global-company-mode t
+   ;; Smooth-scroll start at 5 lines before window borders
+   scroll-margin 5
+   ;; Clock 24h mode
+   display-time-24hr-format t
+   ;; Disable system load in bottom bar when using clock
+   display-time-default-load-average nil)
   ;; Enable clock in bottom bar
   (display-time-mode)
   (setq
-    ;; Turn off auto-save
-    auto-save nil
-    ;; Shorcut viewer (which-key) size
-    which-key-max-description-length 100
-    ;; PHP - start
-    ;; phpmd executable and laravel ruleset
-    flycheck-php-phpmd-executable (getenv "PHPMD")
-    ;;phpcs executable and laravel ruleset
-    flycheck-php-phpcs-executable (getenv "PHPCS")
-    flycheck-phpcs-standard (getenv "PHPCS_RULESET")
-  )
+   ;; Turn off auto-save
+   auto-save nil
+   ;; Shorcut viewer (which-key) size
+   which-key-max-description-length 100
+   ;; PHP - start
+   ;; phpmd executable and laravel ruleset
+   flycheck-php-phpmd-executable (getenv "PHPMD")
+   ;;phpcs executable and laravel ruleset
+   flycheck-php-phpcs-executable (getenv "PHPCS")
+   flycheck-phpcs-standard (getenv "PHPCS_RULESET")
+   )
   ;; Blade files to web-mode
   (add-to-list 'auto-mode-alist '("\\.blade.php\\'" . web-mode))
   ;; PHP - end
