@@ -53,7 +53,7 @@ values."
      ;; Common
      helm
      better-defaults
-     ;; org
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -322,6 +322,8 @@ explicitly specified that a variable should be set before a package is loaded,
 yo should place your code here."
   (add-to-list 'default-frame-alist '(fullscreen . fullscreen))
   (setq
+    ;; Indent code blocks in org-mode
+    org-src-tab-acts-natively t
     neo-window-fixed-size nil
     ;; Enable company-mode globaly
     global-company-mode t
