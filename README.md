@@ -276,6 +276,8 @@ Select all buffer
  - (SEARCH) Modify searched files
  - (SEARCH) Fuzzy single line
  - (HIGHLIGHT) Notify double blank line
+ - (Text object)(Start-EndBlock) Accept this block in emacs-elisp-mode
+ - (Text object)(Scss/css Comment block) Stop line above last comment
 
 # Gitignore
 
