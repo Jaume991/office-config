@@ -20,6 +20,11 @@
     - [Languages](#languages)
         - [PHP](#php)
         - [Markdown](#markdown)
+    - [Text object](#text-object)
+        - [Start-end comment block 'c'](#start-end-comment-block-c)
+        - [Comment block 'C'](#comment-block-c)
+        - [Line 'l'](#line-l)
+        - [All buffer 'e'](#all-buffer-e)
     - [Useful documentation](#useful-documentation)
         - [Change meta+number shortcut. Currently used by window-numbering](#change-metanumber-shortcut-currently-used-by-window-numbering)
         - [Define global key only when mode is active](#define-global-key-only-when-mode-is-active)
@@ -171,6 +176,56 @@ To use `vmd` (Github-favored live preview)
 
 ``` sh
 npm install -g vmd
+```
+
+## Text object
+
+### Start-end comment block 'c'
+
+Ex:
+
+``` css
+/* {block-name} - start */
+
+{content}
+
+/* {block-name} - end */
+```
+
+``` emacs-lisp
+  (spacemacs|define-text-object-regexp "c" "Start-EndBlock" "\\/\\*.*\\s--\\s-start\\s-\\*\\/$" "^\\/\\*.*\\s--\\s-end\\s-\\*\\/$")
+```
+
+### Comment block 'C'
+
+Ex:
+
+``` css
+/* {block-name} */
+
+{content}
+
+/* {next-block-name} */
+```
+
+``` emacs-lisp
+  (spacemacs|define-text-object-regexp "C" "Block" "^\/\*.*\*\/$" "^\/\*.*\*\/$")
+```
+
+### Line 'l'
+
+Select current line
+
+``` emacs-lisp
+  (spacemacs|define-text-object-regexp "l" "line" "^\\s-*" "\\s-*$")
+```
+
+### All buffer 'e'
+
+Select all buffer
+
+``` emacs-lisp
+  (spacemacs|define-text-object-regexp "e" "buffer" "\\`\\s-*" "\\s-*\\'")
 ```
 
 ## Useful documentation

@@ -438,6 +438,16 @@ yo should place your code here."
   (spacemacs/set-leader-keys "pP" 'custom/projectile-switch-project-other-frame)
   ;; Projectile - end
   ;; SHORTCUTS - end
+  ;; Text objects - Start
+  ;; "il"/"al" (inside/around) line text objects:
+  (spacemacs|define-text-object-regexp "l" "line" "^\\s-*" "\\s-*$")
+  ;; "ie"/"ae" (inside/around) entire buffer text objects:
+  (spacemacs|define-text-object-regexp "e" "buffer" "\\`\\s-*" "\\s-*\\'")
+  ;; Start-end comment block /* {name} - start */ to /* {name} - start */
+  (spacemacs|define-text-object-regexp "c" "Start-EndBlock" "\\/\\*.*\\s--\\s-start\\s-\\*\\/$" "^\\/\\*.*\\s--\\s-end\\s-\\*\\/$")
+  ;; Scss/css comment block
+  (spacemacs|define-text-object-regexp "C" "Block" "^\/\*.*\*\/$" "^\/\*.*\*\/$")
+  ;; Text objects - End
   )
 
 (custom-set-variables
