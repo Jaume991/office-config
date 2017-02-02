@@ -349,6 +349,11 @@ yo should place your code here."
    ;;phpcs executable and laravel ruleset
    flycheck-php-phpcs-executable (getenv "PHPCS")
    flycheck-phpcs-standard (getenv "PHPCS_RULESET")
+   ;; Org todo keywords
+   org-todo-keywords
+   '((sequence "TODO(t)" "|" "DONE(d)")
+     (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
+     (sequence "|" "CANCELED(c)"))
    )
   ;; Blade files to web-mode
   (add-to-list 'auto-mode-alist '("\\.blade.php\\'" . web-mode))
