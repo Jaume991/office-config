@@ -444,6 +444,51 @@ yo should place your code here."
         (error "There are no known projects"))))
   (spacemacs/set-leader-keys "pP" 'custom/projectile-switch-project-other-frame)
   ;; Projectile - end
+  ;; Org - start
+  ;; prefix for custom org mode
+  (spacemacs/declare-prefix "o" "Org")
+  (spacemacs/set-leader-keys "ou" 'org-timestamp-up-day)
+  (spacemacs/set-leader-keys "oU" 'org-timestamp-down-day)
+  (defun custom/org-schedule-next ()
+    "Next schedule timestamp"
+    (interactive)
+    (evil-previous-line)
+    (if (search-backward "SCHEDULE: <" nil t)
+        (goto-char (match-end 0))
+      (evil-next-line)))
+  (defun custom/org-schedule-previous ()
+    "Next schedule timestamp"
+    (interactive)
+    (search-forward "SCHEDULE: <"))
+  (defun custom/org-deadline-next ()
+    "Next schedule timestamp"
+    (interactive)
+    (search-forward "DEADLINE: <"))
+  (defun custom/org-deadline-previous ()
+    "Next schedule timestamp"
+    (interactive)
+    (evil-previous-line)
+    (if (search-backward "DEADLINE: <" nil t)
+        (goto-char (match-end 0))
+      (evil-next-line)))
+  (spacemacs|define-transient-state timestamp-manipulation
+    :title "Timestamps transient state"
+    :doc (concat "
+ [_u_]^^^^       Rise one day                    [_q_] exit
+ [_U_]^^^^       Lower one day
+ [_s_/_S_]^^^^     Next/previous schedule
+ [_d_/_D_]^^^^     Next/previuos deadline
+")
+    :bindings
+    ("q" nil :exit t)
+    ("u" org-timestamp-up-day)
+    ("U" org-timestamp-down-day)
+    ("s" custom/org-schedule-next)
+    ("S" custom/org-schedule-previous)
+    ("d" custom/org-deadline-next)
+    ("D" custom/org-deadline-previous))
+  (spacemacs/set-leader-keys "ot" 'spacemacs/timestamp-manipulation-transient-state/body)
+  ;; Org - end
   ;; SHORTCUTS - end
   ;; Text objects - Start
   ;; "il"/"al" (inside/around) line text objects:
