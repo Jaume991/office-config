@@ -351,9 +351,18 @@ yo should place your code here."
    flycheck-phpcs-standard (getenv "PHPCS_RULESET")
    ;; Org todo keywords
    org-todo-keywords
-   '((sequence "TODO(t)" "|" "DONE(d)")
-     (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
+   '((sequence "ADVANCED(a)" "TODO(t)" "DOING(i)" "|" "DONE(d)")
+     (sequence "SUGGESTION(s)" "|" "OKCEPTED(o)")
+     (sequence "REPORT(r)" "BUG(b)" "|" "FIXED(f)")
      (sequence "|" "CANCELED(c)"))
+   org-todo-keyword-faces
+   '(("ADVANCED" . (:foreground "#666666"))
+     ("DOING" . (:foreground "#ffcc66"))
+     ("REPORT" . (:foreground "#9966ff"))
+     ("SUGGESTION" . (:foreground "#0099ff"))
+     ("BUG" . (:foreground "#ff99ff" :weight bold))
+     ("REPORT" . (:foreground "#9966ff"))
+     ("CANCELED" . (:foreground "#ff1a75")))
    )
   ;; Blade files to web-mode
   (add-to-list 'auto-mode-alist '("\\.blade.php\\'" . web-mode))
