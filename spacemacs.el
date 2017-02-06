@@ -48,19 +48,20 @@ values."
      (markdown :variables markdown-live-preview-engine 'vmd)
      ;; Themes
      themes-megapack
-     ;; Git
+     ;; Version control
      git
+     (version-control :variables
+                      version-control-diff-side 'left
+                      version-control-global-margin t)
      ;; Common
      helm
      better-defaults
+     ;; Organization
      org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     (version-control :variables
-                      version-control-diff-side 'left
-                      version-control-global-margin t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
