@@ -536,7 +536,6 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("/var/www/html/offerton/TODOs.org")))
  '(safe-local-variable-values (quote ((Byte-compile-warnings not free-vars unresolved)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
