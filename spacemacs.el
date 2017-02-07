@@ -313,6 +313,8 @@ before packages are loaded.  If you are unsure, you should try in setting them i
    ycmd-extra-conf-whitelist '("~/Develop/*")
    ycmd-force-semantic-completion t
    ycmd/all-the-modes t
+   ;; Disable environment variables in non accesible files warning
+   exec-path-from-shell-check-startup-files
    )
   )
 
