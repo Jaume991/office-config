@@ -23,6 +23,8 @@ set splitright
 set timeoutlen=1000 ttimeoutlen=0
 " set font for mvim
 " set guifont=Meslo\ LG\ M\ for\ Powerline:h12
+" disable autoload on session start
+let g:session_autoload = no
 
 " Maximize
 " Change to position of second monitor
