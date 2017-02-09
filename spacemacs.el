@@ -49,7 +49,8 @@ values."
      ;; Themes
      themes-megapack
      ;; Version control
-     git
+     (git :variables
+          git-magit-status-fullscreen t)
      (version-control :variables
                       version-control-diff-side 'left
                       version-control-global-margin t)
@@ -150,7 +151,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro for Powerline"
-                               :size 13
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1)
