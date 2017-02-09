@@ -353,6 +353,8 @@ yo should place your code here."
    ;;phpcs executable and laravel ruleset
    flycheck-php-phpcs-executable (getenv "PHPCS")
    flycheck-phpcs-standard (getenv "PHPCS_RULESET")
+   ;; Org clock time on spaceline
+   spaceline-org-clock-p t
    ;; Org todo keywords
    org-todo-keywords
    '((sequence "ADVANCED(a)" "TODO(t)" "DOING(i)" "|" "DONE(d)")
