@@ -125,5 +125,6 @@ alias gcmaster="git checkout master"
 # Laravel
 alias artisan="php artisan"
 alias compDump="composer dumpautoload -o"
+alias phpunit="./vendor/bin/phpunit"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
