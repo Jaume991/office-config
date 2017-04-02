@@ -504,6 +504,10 @@ yo should place your code here."
     ("D" custom/org-deadline-previous))
   (spacemacs/set-leader-keys "ot" 'spacemacs/timestamp-manipulation-transient-state/body)
   ;; Org - end
+  ;; Evil - start
+  (define-key evil-normal-state-map (kbd "C-j") 'move-text-down)
+  (define-key evil-normal-state-map (kbd "C-k") 'move-text-up)
+  ;; Evil - end
   ;; SHORTCUTS - end
   ;; Text objects - Start
   ;; "il"/"al" (inside/around) line text objects:
