@@ -45,6 +45,7 @@ values."
      emacs-lisp
      vimscript
      python
+     yaml
      (markdown :variables markdown-live-preview-engine 'vmd)
      ;; Themes
      themes-megapack
