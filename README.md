@@ -100,12 +100,18 @@ Each session in a group will automatically share the same set of windows: openin
   - Emacs-lisp
   - Vimscript
   - Python
+  - Yaml
   - Markdown
     - `Markdown-live-preview-engine 'vmd`
   - Themes-megapack
   - Git
+    - `git-magit-status-fullscreen t`
+  - Version-control
+    - `version-control-diff-side 'left`
+    - `version-control-global-margin t`
   - Helm
   - Better-defaults
+  - Org
 - Editing style vim
 - Random startup banner
 - Font
@@ -113,13 +119,22 @@ Each session in a group will automatically share the same set of windows: openin
 - Cycling themes
   - Spacemacs-dark
   - Gotham
+  - Twilight-anti-bright
 
 ### User configuration
 
 - `display-time-24hr-format t`
 - `display-time-default-load-average nil`
 - `auto-save nil`
+- `dotspacemacs-fullscreen-at-startup t`
 - `which-key-max-description-length 100`
+- ``dotspacemacs-whitespace-cleanup `trailing``
+- dotspacemacs-startup-lists
+  - Recents . 5
+  - Projects . 7
+  - Bookmarks . 2
+  - Agenda . 2
+  - Todos . 2
 
 ## Shorcuts
 
