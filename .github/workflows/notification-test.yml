@@ -19,4 +19,5 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Send notification
-        run: curl -H "X-Title: New PR" -d "${{ github.event.pull_request.title }}" ntfy.sh/bwsPgkHJKh7afcIGAF3fG4
+        run: |
+          curl -H "X-Title: New dotfiles PR" -d "${{ github.event.pull_request.title }}" ntfy.sh/bwsPgkHJKh7afcIGAF3fG4
