@@ -2,5 +2,3 @@ dist/
 *.min.*
 # Node
 /node_modules
-# Laravel
-/vendor
