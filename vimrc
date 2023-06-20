@@ -129,9 +129,6 @@ let g:syntastic_php_checkers = ['php'] " removed phpcs and phpmd to execute manu
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_aggregate_errors = 1
 
-" PHPDOC config
-map <Leader>d :call PhpDoc()<CR>
-
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 " Execute 'UltiSnipsAddFiletypes php' if necessary
 let g:UltiSnipsSnippetsDir="~/.vim/bundle/vim-snippets/UltiSnips"
@@ -305,9 +302,6 @@ Bundle 'edkolev/tmuxline.vim'
 
 " blade syntax
 Plugin 'jwalton512/vim-blade'
-
-" php complete
-Plugin 'shawncplus/phpcomplete.vim'
 
 " calendar
 Plugin 'itchyny/calendar.vim'
